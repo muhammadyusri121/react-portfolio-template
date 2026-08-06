@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LanguageIcon from '@mui/icons-material/Language';
 
 function Contact() {
 
@@ -24,37 +27,34 @@ function Contact() {
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
   };
 
   return (
     <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <h1>Hubungi Saya</h1>
+          <p>Punya ide proyek atau berminat untuk berkolaborasi? Mari wujudkan bersama!</p>
+          
+          <div className="contact-details-grid">
+            <div>
+              <EmailIcon style={{ color: '#ab47bc' }} />
+              <a href="mailto:muhammadyusri00000@gmail.com">muhammadyusri00000@gmail.com</a>
+            </div>
+            <div>
+              <PhoneIcon style={{ color: '#ab47bc' }} />
+              <a href="whatsapp://send?phone=+6285856800664">+6285856800664</a>
+            </div>
+            <div>
+              <LocationOnIcon style={{ color: '#ab47bc' }} />
+              <span>Sampang, Jawa Timur, Indonesia</span>
+            </div>
+            <div>
+              <LanguageIcon style={{ color: '#ab47bc' }} />
+              <a href="https://myusri.dev" target="_blank" rel="noreferrer">myusri.dev</a>
+            </div>
+          </div>
+
           <Box
             ref={form}
             component="form"
@@ -66,45 +66,45 @@ function Contact() {
               <TextField
                 required
                 id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
+                label="Nama Lengkap"
+                placeholder="Siapa nama Anda?"
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
                 error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
+                helperText={nameError ? "Mohon masukkan nama Anda" : ""}
               />
               <TextField
                 required
                 id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
+                label="Email / No. HP"
+                placeholder="Bagaimana saya bisa menghubungi Anda?"
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
                 error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
+                helperText={emailError ? "Mohon masukkan email atau nomor kontak Anda" : ""}
               />
             </div>
             <TextField
               required
               id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
+              label="Pesan"
+              placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."
               multiline
-              rows={10}
+              rows={6}
               className="body-form"
               value={message}
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
               error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
+              helperText={messageError ? "Mohon masukkan isi pesan Anda" : ""}
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
+              Kirim Pesan
             </Button>
           </Box>
         </div>

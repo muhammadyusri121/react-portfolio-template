@@ -30,6 +30,24 @@
     transform: scale(1.05);
 }
 
+.project-tech-stack {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-chip {
+    background-color: #5201cba6 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+
+    span {
+        color: #ffffff !important;
+    }
+}
+
 @media screen {
     @media (max-width: 700px) {
         .projects-container {

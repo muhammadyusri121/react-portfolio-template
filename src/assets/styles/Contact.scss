@@ -4,22 +4,123 @@
   margin-right: 5px;
 }
 
+.contact-details-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 24px 0 32px 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+
+    span, a {
+      color: #ffffff !important;
+    }
+
+    a:hover {
+      color: #ab47bc !important;
+    }
+  }
+}
+
 .contact-form {
   padding-top: 20px;
 
+  .MuiFormLabel-root {
+    color: rgba(255, 255, 255, 0.7) !important;
+    
+    &.Mui-focused {
+      color: #ab47bc !important;
+    }
+  }
+
+  .MuiInputBase-input {
+    color: #ffffff !important;
+  }
+
+  .MuiOutlinedInput-root {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    
+    fieldset {
+      border-color: rgba(255, 255, 255, 0.2) !important;
+      background-color: transparent !important;
+    }
+
+    &:hover fieldset {
+      border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    &.Mui-focused fieldset {
+      border-color: #ab47bc !important;
+    }
+  }
+
   button {
     float: right;
-    background-color: white;
-    color: #050f0b;
+    background-color: #5000ca !important;
+    color: #ffffff !important;
+    font-weight: 600;
   }
 
   button:hover {
-    background-color: #5000ca;
-    color: white;
+    background-color: #ab47bc !important;
+    color: #ffffff !important;
+  }
+}
+
+.light-mode {
+  .contact-details-grid {
+    div {
+      color: #0d1116;
+
+      span, a {
+        color: #0d1116 !important;
+      }
+
+      a:hover {
+        color: #5000ca !important;
+      }
+    }
   }
 
-  fieldset {
-    background-color: white;
+  .contact-form {
+    .MuiFormLabel-root {
+      color: rgba(0, 0, 0, 0.7) !important;
+      
+      &.Mui-focused {
+        color: #5000ca !important;
+      }
+    }
+
+    .MuiInputBase-input {
+      color: #0d1116 !important;
+    }
+
+    .MuiOutlinedInput-root {
+      background-color: rgba(0, 0, 0, 0.02);
+      
+      fieldset {
+        border-color: rgba(0, 0, 0, 0.2) !important;
+      }
+
+      &:hover fieldset {
+        border-color: rgba(0, 0, 0, 0.5) !important;
+      }
+
+      &.Mui-focused fieldset {
+        border-color: #5000ca !important;
+      }
+    }
+
+    button {
+      background-color: #5000ca !important;
+      color: #ffffff !important;
+    }
   }
 }
 

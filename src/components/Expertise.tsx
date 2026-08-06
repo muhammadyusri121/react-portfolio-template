@@ -1,81 +1,136 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { faServer, faUsers, faRobot, faCamera } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
-const labelsFirst = [
-    "React",
-    "TypeScript",
+const frontendSkills = [
+    "React.js",
     "JavaScript",
     "HTML5",
     "CSS3",
+    "UI/UX Implementation",
     "SASS",
-    "Flask",
-    "Python",
-    "SQL",
+    "Responsive Web"
+];
+
+const backendSkills = [
+    "Elixir (Phoenix)",
+    "Python (FastAPI)",
+    "Node.js",
+    "RESTful API",
+    "API Design"
+];
+
+const devOpsSkills = [
     "PostgreSQL",
-    "Postman"
-];
-
-const labelsSecond = [
-    "Git",
-    "GitHub Actions",
+    "MySQL",
+    "Linux (Ubuntu)",
+    "Nginx Reverse Proxy",
     "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "Git/GitHub",
+    "VPS Deployment"
 ];
 
-const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+const aiSkills = [
+    "Artificial Intelligence",
+    "GenAI & LLM Tools",
+    "Prompt Engineering",
+    "AI Workflow Integration",
+    "Automation"
+];
+
+const mediaSkills = [
+    "Photography",
+    "Videography",
+    "Visual Documentation",
+    "Media Production",
+    "Creative Editing"
+];
+
+const softSkills = [
+    "Technical Leadership",
+    "Project Management",
+    "Problem Solving",
+    "Public Speaking & Communication",
+    "Organizational Administration"
 ];
 
 function Expertise() {
     return (
     <div className="container" id="expertise">
         <div className="skills-container">
-            <h1>Keahlian</h1>
+            <h1>Keahlian Teknis &amp; Soft Skills</h1>
             <div className="skills-grid">
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
-                    <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
-                        {labelsSecond.map((label, index) => (
-                            <Chip key={index} className='chip' label={label} />
-                        ))}
-                    </div>
-                </div>
-                <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <h3>Frontend Development</h3>
+                    <p>Mengembangkan antarmuka aplikasi web modern, responsif, dan intuitif menggunakan React.js, JavaScript, HTML5, CSS3, serta penerapan standar UI/UX terbaik.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {labelsFirst.map((label, index) => (
+                        {frontendSkills.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
                 </div>
+
                 <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <FontAwesomeIcon icon={faServer} size="3x"/>
+                    <h3>Backend &amp; API Architecture</h3>
+                    <p>Merancang arsitektur RESTful API yang tangguh, berperforma tinggi (high concurrency), dan scalable menggunakan Elixir (Phoenix Framework), Python (FastAPI), serta Node.js.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
-                        {labelsThird.map((label, index) => (
+                        {backendSkills.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faDocker} size="3x"/>
+                    <h3>Database &amp; DevOps Infrastructure</h3>
+                    <p>Mengatur skema basis data relasional serta mengelola environment deployment server Linux (Ubuntu) produksi dengan Nginx reverse proxy, Docker, dan manajemen VPS.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Tech stack:</span>
+                        {devOpsSkills.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faRobot} size="3x"/>
+                    <h3>AI &amp; Emerging Technologies</h3>
+                    <p>Antusias dalam mengeksplorasi serta mengintegrasikan teknologi Kecerdasan Buatan (GenAI, LLM tools, &amp; Prompt Engineering) untuk otomasi dan peningkatan efisiensi alur kerja software.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Fokus:</span>
+                        {aiSkills.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faCamera} size="3x"/>
+                    <h3>Photography &amp; Visual Media</h3>
+                    <p>Memiliki keahlian dalam fotografi, pembuatan konten visual, dan dokumentasi videografi profesional dengan perhatian pada estetika serta cerita visual.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Keahlian:</span>
+                        {mediaSkills.map((label, index) => (
+                            <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="skill">
+                    <FontAwesomeIcon icon={faUsers} size="3x"/>
+                    <h3>Kepemimpinan &amp; Soft Skills</h3>
+                    <p>Pengalaman menginisiasi dan memimpin komunitas pengembang (DevLoop), manajemen proyek software, penyampaian materi (public speaking), serta administrasi organisasi.</p>
+                    <div className="flex-chips">
+                        <span className="chip-title">Keahlian:</span>
+                        {softSkills.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>

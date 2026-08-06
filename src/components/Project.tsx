@@ -1,38 +1,70 @@
 import React from "react";
+import Chip from '@mui/material/Chip';
 import '../assets/styles/Project.scss';
 
 const projectData = [
     {
-        url: "https://dispo.sman1ketapang.sch.id",
-        title: "Dispo SMAN 1 Ketapang",
-        description: "Proyek ini adalah Sistem Pembinaan Siswa yang dirancang untuk membantu sekolah dalam mengelola data siswa, pelanggaran, dan informasi penting lainnya. Sistem ini bertujuan untuk mempermudah proses pencatatan dan pelaporan, serta memberikan informasi yang akurat dan relevan bagi pihak sekolah. Dengan antarmuka yang intuitif, sistem ini diharapkan dapat meningkatkan efisiensi dan efektivitas dalam pengelolaan data siswa."
+        url: "https://opendatadisabilitas.com",
+        title: "Prototipe Open Data Disabilitas",
+        description: "Platform open data disabilitas partisipatif berbasis riset dengan integrasi DevOps, pengelolaan environment, dan VPS deployment.",
+        techStack: ["DevOps", "Docker", "Linux Ubuntu", "VPS Deployment"]
     },
     {
         url: "https://sman1ketapang.sch.id",
-        title: "SMAN 1 Ketapang",
-        description: "Proyek ini adalah Sistem Informasi Sekolah yang dirancang untuk membantu sekolah dalam mengelola data siswa, pelanggaran, dan informasi penting lainnya. Sistem ini bertujuan untuk mempermudah proses pencatatan dan pelaporan, serta memberikan informasi yang akurat dan relevan bagi pihak sekolah. Dengan antarmuka yang intuitif, sistem ini diharapkan dapat meningkatkan efisiensi dan efektivitas dalam pengelolaan data siswa."
+        title: "Web Profile SMAN 1 Ketapang",
+        description: "Portal profil sekolah berbasis Next.js dengan dashboard admin interaktif untuk pengelolaan berita, profil, dan galeri secara mandiri.",
+        techStack: ["Next.js", "Node.js API", "Dashboard Admin", "Linux VPS", "Nginx"]
     },
     {
-        url: "https://cms.sman1ketapang.sch.id",
-        title: "CMS SMAN 1 Ketapang",
-        description: "Proyek ini adalah Sistem Pembinaan Siswa yang dirancang untuk membantu sekolah dalam mengelola data siswa, pelanggaran, dan informasi penting lainnya. Sistem ini bertujuan untuk mempermudah proses pencatatan dan pelaporan, serta memberikan informasi yang akurat dan relevan bagi pihak sekolah. Dengan antarmuka yang intuitif, sistem ini diharapkan dapat meningkatkan efisiensi dan efektivitas dalam pengelolaan data siswa."
+        url: "https://dispo.sman1ketapang.sch.id",
+        title: "Sistem Pembinaan Siswa (Dispo)",
+        description: "Sistem presensi digital siswa berbasis React.js dan REST API backend untuk efisiensi pengelolaan data sekolah.",
+        techStack: ["React.js", "REST API", "PostgreSQL", "Linux VPS", "Nginx"]
+    },
+    {
+        url: "https://myusri.dev",
+        title: "Sistem Laporan & Evaluasi Internal UPA TIK UTM",
+        description: "Sistem informasi laporan dan evaluasi internal berperforma tinggi (high concurrency) menggunakan Elixir dan Phoenix Framework.",
+        techStack: ["Elixir", "Phoenix Framework", "PostgreSQL", "High Concurrency"]
+    },
+    {
+        url: "http://jasapasangindihome.biz.id/",
+        title: "Website Sales Indihome",
+        description: "Website promosi dan penjualan paket Indihome berbasis Next.js dengan halaman landing, katalog paket, dan form pemesanan.",
+        techStack: ["Next.js", "REST API", "Vercel", "Freelance"]
+    },
+    {
+        url: "https://kkndalisodo.vercel.app/",
+        title: "Website Profil Desa Dalisodo",
+        description: "Website profil desa berbasis Next.js sebagai media informasi dan publikasi program kerja KKN Universitas Merdeka Malang.",
+        techStack: ["Next.js", "Content Management", "Vercel", "Freelance"]
     }
 ];
 
 function Project() {
     return(
     <div className="projects-container" id="projects">
-        <h1>Projects</h1>
+        <h1>Portofolio &amp; Proyek Utama</h1>
         <div className="projects-grid">
             {projectData.map((project, index) => (
                 <div className="project" key={index}>
                     <a href={project.url} target="_blank" rel="noreferrer">
-                        <img src={`https://api.microlink.io/?url=${project.url}&screenshot=true&meta=false&embed=screenshot.url`} className="zoom" alt="thumbnail" width="100%"/>
+                        <img src={`https://api.microlink.io/?url=${encodeURIComponent(project.url)}&screenshot=true&meta=false&embed=screenshot.url`} className="zoom" alt={project.title} width="100%"/>
                     </a>
                     <a href={project.url} target="_blank" rel="noreferrer">
                         <h2>{project.title}</h2>
                     </a>
                     <p>{project.description}</p>
+                    <div className="project-tech-stack">
+                        {project.techStack.map((tech, tIndex) => (
+                            <Chip 
+                              key={tIndex} 
+                              label={tech} 
+                              size="small" 
+                              className="project-chip"
+                            />
+                        ))}
+                    </div>
                 </div>
             ))}
         </div>
