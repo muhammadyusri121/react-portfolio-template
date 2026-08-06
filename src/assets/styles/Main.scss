@@ -48,11 +48,18 @@
         margin-block-end: 0px;
     }
 
+    .hero-action-buttons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
     .btn-download-resume {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        margin-top: 20px;
         padding: 10px 22px;
         background-color: #5000ca;
         color: #ffffff !important;
@@ -72,6 +79,91 @@
 
         svg {
             font-size: 1.25rem;
+        }
+    }
+
+    .btn-music-icon-only {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #ffffff;
+            color: #000000 !important;
+            border-color: #ffffff;
+            transform: scale(1.1);
+
+            svg {
+                color: #000000 !important;
+            }
+        }
+
+        &.playing {
+            border-color: #ffffff;
+            color: #ffffff !important;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        svg {
+            font-size: 1.4rem;
+            color: #ffffff !important;
+        }
+    }
+}
+
+.light-mode {
+    .about-section .content {
+        .social_icons a,
+        .mobile_social_icons a {
+            color: #0d1116 !important;
+            
+            svg {
+                color: #0d1116 !important;
+            }
+
+            &:hover svg {
+                color: #5000ca !important;
+            }
+        }
+
+        h1, p {
+            color: #0d1116 !important;
+        }
+    }
+
+    .btn-music-icon-only {
+        background-color: #ffffff !important;
+        color: #0d1116 !important;
+        border: 2px solid #0d1116 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+
+        svg {
+            color: #0d1116 !important;
+            fill: #0d1116 !important;
+        }
+
+        &:hover {
+            background-color: #0d1116 !important;
+            border-color: #0d1116 !important;
+
+            svg {
+                color: #ffffff !important;
+                fill: #ffffff !important;
+            }
+        }
+
+        &.playing {
+            border-color: #0d1116 !important;
+            box-shadow: 0 0 12px rgba(13, 17, 22, 0.3) !important;
         }
     }
 }
