@@ -75,7 +75,7 @@ function Main() {
         <div className="content">
           <div className="social_icons">
             <a href="https://github.com/muhammadyusri121" target="_blank" rel="noreferrer" title="GitHub"><GitHubIcon /></a>
-            <a href="https://linkedin.com/in/muhammadyusri" target="_blank" rel="noreferrer" title="LinkedIn"><LinkedInIcon /></a>
+            <a href="https://linkedin.com/in/muhammadyusri121" target="_blank" rel="noreferrer" title="LinkedIn"><LinkedInIcon /></a>
             <a href="mailto:muhammadyusri00000@gmail.com" target="_blank" rel="noreferrer" title="Email"><EmailIcon /></a>
             <a href="https://myusri.dev" target="_blank" rel="noreferrer" title="Website"><LanguageIcon /></a>
           </div>
@@ -105,7 +105,7 @@ function Main() {
 
           <div className="mobile_social_icons">
             <a href="https://github.com/muhammadyusri121" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-            <a href="https://linkedin.com/in/muhammadyusri" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+            <a href="https://linkedin.com/in/muhammadyusri121" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
             <a href="mailto:muhammadyusri00000@gmail.com" target="_blank" rel="noreferrer"><EmailIcon /></a>
             <a href="https://myusri.dev" target="_blank" rel="noreferrer"><LanguageIcon /></a>
           </div>
