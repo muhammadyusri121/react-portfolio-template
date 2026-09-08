@@ -34,10 +34,16 @@ const projectData = [
         techStack: ["Next.js", "REST API", "Vercel", "Freelance"]
     },
     {
-        url: "https://kkndalisodo.vercel.app/",
+        url: "https://desadalisodo.site/",
         title: "Website Profil Desa Dalisodo",
         description: "Website profil desa berbasis Next.js sebagai media informasi dan publikasi program kerja KKN Universitas Merdeka Malang.",
         techStack: ["Next.js", "Content Management", "Vercel", "Freelance"]
+    },
+       {
+        url: "https://asistensi.myusri.dev",
+        title: "Sistem Informasi Asistensi Akademik",
+        description: "Sistem informasi akademik berbasis Next.js sebagai media asistensi akademik untuk mempermudah mahasiswa dalam mengakses informasi akademik.",
+        techStack: ["Next.js", "PostgreSQL", "Linux VPS", "Nginx"]
     }
 ];
 
